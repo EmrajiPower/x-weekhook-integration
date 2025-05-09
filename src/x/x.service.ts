@@ -29,7 +29,7 @@ export class TwitterService {
       text: tweet.text,
       username: tweet.user.screen_name,
       url: `https://twitter.com/${tweet.user.screen_name}/status/${tweet.id_str}`,
-      timestamp: tweet.created_at,
+      created_at: tweet.created_at,
     };
 
     try {
