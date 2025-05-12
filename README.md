@@ -18,6 +18,10 @@ Instead, I've implemented a workaround so as to accomplish the goal of fetching 
         X_API_TOKEN=AAAAAAAAAAAAAAAAAAAAAHeY0wEAAAAALCrNC6CLyu7UCmlwRr5BaNNZmSY%3DVMjvBvAbWjiTP0SQWowo8ApDabWb4ndSs2A9zE3IYtyZhklrKM
         NOTION_TOKEN=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
         NOTION_DB_ID=1ee4505f6025806a906aec2fe6af6244
+    Where ```_X_API_SECRET_``` is found in X Developer Dashboad > Consumer Keys > API Key and Secret,
+    Then ```_X_API_TOKEN_``` is found in X Developer Dashboad > Authentication Tokens > Bearer Token,
+    And ```_NOTION_TOKEN_``` is generated in the Integrations module of Notion API,
+    Finally ```NOTION_DB_ID``` is found assigning the integration to an empty database
 #### Step 2: Run the project
 - Check the file ```constants.ts```, this is the root of the Twitter account id, so by default ```NATGEO``` is the target account to store the x/tweeter feed, you can add more accounts.
 - Run ```npm run start:dev```
