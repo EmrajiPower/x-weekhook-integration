@@ -9,7 +9,8 @@ Instead, I've implemented a workaround so as to accomplish the goal of fetching 
 ![Output](./src/img/output.png)
 
 #### Step 1: Fetch the code and Setup of Environment Variables
-- Prerequisites: at least ```Node 20.x.x```
+- Your Notion Database should be a Table, with the fields configured: text, username, url, created_at
+- At least ```Node 20.x.x```
 - Download the base code [here](https://github.com/EmrajiPower/x-weekhook-integration)
 - Run ```npm install```
 - Based on ```.env.sample``` file, create a ```.env```
@@ -40,7 +41,7 @@ Essentially, logs are running in "Step" order, So ```Step 1, Step 2``` and ```St
 # Tools
 
 ### Unit testing
-- Execute test by running``` npm run test```
+- Execute test by running ```npm run test```
 
 #### Check user ID for the Twitter API test: NatGeo Example
 ```
