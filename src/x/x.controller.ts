@@ -10,14 +10,21 @@ export class TwitterController {
   @HttpCode(200)
   healthCheck(@Query() query: CrcDto) {
     console.log('CRC called with:', query.crc_token);
-    return this.twitterService.validateCrc(query.crc_token);
+    const crcResponse = this.twitterService.validateCrc(query.crc_token);
+    return crcResponse;
   }
 
   @Post()
   @HttpCode(200)
   async handleEvent(@Body() payload: any) {
+    // console.log('[Received Payload]:', JSON.stringify(payload, null, 2));
+
+    // Process the event payload
     await this.twitterService.processEvent(payload);
-    console.log('[Body]:', JSON.stringify(payload, null, 2));
-    return 'OK';
+
+    // Fetch tweets directly from a user, for example:
+   await this.twitterService.fetchUserTweets('NatGeo');
+
+    return { status: 'OK', message: 'Event processed successfully' };
   }
 }

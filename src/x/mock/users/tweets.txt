@@ -1,0 +1,91 @@
+From: https://api.twitter.com/2/users/17471979/tweets
+{
+  data: [
+    {
+      id: '1921596254821220684',
+      created_at: '2025-05-11T16:00:23.000Z',
+      edit_history_tweet_ids: [
+        '1921596254821220684'
+      ],
+      text: "Happy Mother's Day, and happy Allomother's Day, too.\n\nAllomothering is a common elephant practice where females help care for younger elephants who aren't their children, including protecting them from threats, like during this earthquake in South California.\n\nLearn more about https://t.co/pUu33hBxQE"
+    },
+    {
+      id: '1921550899765268522',
+      created_at: '2025-05-11T13:00:09.000Z',
+      edit_history_tweet_ids: [
+        '1921550899765268522'
+      ],
+      text: "Plunging 224 feet (68 meters) over columnar basalt, it's hard not to fall for the natural beauty of Latourell Falls. https://t.co/HwYRo5HL0a"
+    },
+    {
+      id: '1921251361489862935',
+      created_at: '2025-05-10T17:09:54.000Z',
+      edit_history_tweet_ids: [
+        '1921251361489862935'
+      ],
+      text: "RT @NatGeoAnimals: Crumbling ice is a big problem, but these penguins can't let that stop them.\n\n#SecretsOfThePenguins is now streaming on…"
+    },
+    {
+      id: '1920949566636999059',
+      created_at: '2025-05-09T21:10:40.000Z',
+      edit_history_tweet_ids: [
+        '1920949566636999059'
+      ],
+      text: "Cardinal Robert Francis Prevost chose a pontifical name steeped in tradition: Pope Leo XIV. From Pope Leo I's purported exchange with Attila the Hun to Pope Leo IX's role in the Great Schism, the name Leo holds considerable importance within the Church.https://t.co/mEPgKfmt2r https://t.co/GirRp8FVSg"
+    },
+    {
+      id: '1920934676660654302',
+      created_at: '2025-05-09T20:11:30.000Z',
+      edit_history_tweet_ids: [
+        '1920934676660654302'
+      ],
+      text: '@jpcv777 @NatGeoTV @DisneyPlus @hulu We love taking a peek beneath the waves 🌊'
+    },
+    {
+      id: '1920934550936416674',
+      created_at: '2025-05-09T20:11:00.000Z',
+      edit_history_tweet_ids: [
+        '1920934550936416674'
+      ],
+      text: "@McS96073 Isn't it fascinating?"
+    },
+    {
+      id: '1920826089380642990',
+      created_at: '2025-05-09T13:00:01.000Z',
+      edit_history_tweet_ids: [
+        '1920826089380642990'
+      ],
+      text: 'Ocean with David Attenborough premieres Saturday, June 7 at 9/8c on @natgeotv. Streaming next day on @DisneyPlus and @hulu.'
+    },
+    {
+      id: '1920826087510073575',
+      created_at: '2025-05-09T13:00:01.000Z',
+      edit_history_tweet_ids: [
+        '1920826087510073575'
+      ],
+      text: 'This fishing technique not only kills vast amounts of sea life but also destroys seafloor habitats and releases significant amounts of carbon dioxide. Yet this practice remains legal in most marine protected areas.'
+    },
+    {
+      id: '1920826085190611218',
+      created_at: '2025-05-09T13:00:00.000Z',
+      edit_history_tweet_ids: [
+        '1920826085190611218'
+      ],
+      text: 'Never-before-seen footage of bottom trawling—a particularly destructive method of fishing in which a ship drags a heavy iron net across the seabed, blindly catching anything in its path—has been released. 🔗 \n https://t.co/JGgT1YydsB'
+    },
+    {
+      id: '1920780793737019607',
+      created_at: '2025-05-09T10:00:02.000Z',
+      edit_history_tweet_ids: [
+        '1920780793737019607'
+      ],
+      text: 'Amid the pomp and ceremony of the Vatican, former Cardinal Robert Prevost has emerged onto the balcony of St. Peter’s Basilica as the first U.S.-born pope in history. Prevost, 69, hails from Chicago, Illinois, and has taken the papal name of Leo XIV. Learn more about his life and https://t.co/gZW5wFtDQc'
+    }
+  ],
+  meta: {
+    next_token: '7140dibdnow9c7btw4e0heutg7nee283ewyjmdx6cvl13',
+    result_count: 10,
+    newest_id: '1921596254821220684',
+    oldest_id: '1920780793737019607'
+  }
+}

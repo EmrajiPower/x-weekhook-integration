@@ -1,6 +1,8 @@
 ## WIP
 
 ### CURL sample
+
+#### Notion POST
 ```
 curl -X POST http://localhost:3000/webhook/x \
   -H "Content-Type: application/json" \
@@ -15,3 +17,16 @@ curl -X POST http://localhost:3000/webhook/x \
     ]
   }'
 ```
+
+#### Check user ID for the Twitter API test
+```
+curl -X GET "https://api.twitter.com/2/users/by/username/NatGeo" \
+       -H "Authorization: Bearer [TOKEN]"
+```
+
+#### Check Twitter API constraints
+```
+curl -i -H "Authorization: Bearer [TOKEN]" \
+       "https://api.twitter.com/2/users/17471979/tweets?tweet.fields=created_at"
+```
+

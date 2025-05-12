@@ -1,7 +1,9 @@
 import { Injectable, Logger } from '@nestjs/common';
 import * as crypto from 'crypto';
+import axios from 'axios';
 import { ConfigService } from '../config/config.service';
 import { NotionService } from '../notion/notion.service';
+import { Cron, CronExpression } from '@nestjs/schedule';
 
 @Injectable()
 export class TwitterService {
@@ -12,11 +14,40 @@ export class TwitterService {
     private notion: NotionService,
   ) {}
 
-  validateCrc(crcToken: string): { response_token: string } {
+  // Runs cron task every 10 minutes
+  @Cron(CronExpression.EVERY_10_MINUTES)
+  async pollUserTweets() {
+    try {
+      const tweets = await this.fetchUserTweets('NatGeo');
+      console.log('Tweets fetched on interval:', tweets);
+    } catch (err) {
+      console.error('Error during scheduled tweet fetch:', err.message);
+    }
+  }
+
+  validateCrc(crcToken: string) {
     const hmac = crypto.createHmac('sha256', this.config.twitterConsumerSecret)
       .update(crcToken)
       .digest('base64');
-    return { response_token: `sha256=${hmac}` };
+    return `sha256=${hmac}`;
+  }
+
+  async fetchUserTweets(username: string): Promise<any> {  
+    try {
+      const tweetsResponse = await axios.get(
+        `https://api.twitter.com/2/users/17471979/tweets?tweet.fields=created_at`,{
+            headers: {
+              Authorization: `Bearer AAAAAAAAAAAAAAAAAAAAAHeY0wEAAAAALCrNC6CLyu7UCmlwRr5BaNNZmSY%3DVMjvBvAbWjiTP0SQWowo8ApDabWb4ndSs2A9zE3IYtyZhklrKM`,
+            }            
+          },
+      );
+
+      this.logger.log(`Fetched tweets for user ${username}:`, tweetsResponse.data);
+      return tweetsResponse.data;
+    } catch (error) {
+      this.logger.error('Error fetching user tweets:', error.response?.data || error.message);
+      throw error;
+    }
   }
 
   async processEvent(payload: any) {
