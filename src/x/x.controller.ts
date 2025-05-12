@@ -1,6 +1,7 @@
 import { Controller, Get, Post, Query, Body, HttpCode } from '@nestjs/common';
 import { TwitterService } from './x.service';
 import { CrcDto } from './dto/crc.dto';
+import { NATGEO } from 'src/common/constants';
 
 @Controller('webhook/x')
 export class TwitterController {
@@ -17,14 +18,11 @@ export class TwitterController {
   @Post()
   @HttpCode(200)
   async handleEvent(@Body() payload: any) {
-    // console.log('[Received Payload]:', JSON.stringify(payload, null, 2));
-
+    // Fetch tweets directly from a user:
+    const data = await this.twitterService.fetchUserTweets(NATGEO);
+    console.log("[Step 1]",data)
     // Process the event payload
-    await this.twitterService.processEvent(payload);
-
-    // Fetch tweets directly from a user, for example:
-   await this.twitterService.fetchUserTweets('NatGeo');
-
+    await this.twitterService.processEvent(data);
     return { status: 'OK', message: 'Event processed successfully' };
   }
 }

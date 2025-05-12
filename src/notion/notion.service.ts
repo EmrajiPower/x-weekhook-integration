@@ -11,7 +11,7 @@ export class NotionService {
   }
 
   async createPage({ text, username, url, created_at }: any) {
-    console.log("Ver ... ",{ text, username, url, created_at })
+    console.log("[Step 3]",{ text, username, url, created_at })
     return this.notion.pages.create({
       parent: { database_id: this.config.notionDatabaseId },
       properties: {
