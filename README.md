@@ -35,9 +35,12 @@ curl -X POST http://localhost:3000/webhook/x \
 ```
 
 #### Step 4: Check the response logs in the console
-Essentially, logs are running in "Step" order, So ```Step 1, Step 2``` and ```Step 3```, are succed logs. But is server throws and error, it won't crash but, for example, if the Cron task fail it will prompt ```Request failed with status code 429```
+Essentially, logs are running in "Step" order, So ```Step 1, Step 2``` and ```Step 3```, are succed logs. But is server throws and error, it won't crash but, for example, if the Cron task fail it will prompt ```Request failed with status code 429```. Even if you get status code error ```429``` when starting the server, it's recovered and will fetch in the next 10 minutes the X/Twitter feed without issues
 
 # Tools
+
+### Unit testing
+- Execute test by running``` npm run test```
 
 #### Check user ID for the Twitter API test: NatGeo Example
 ```

@@ -4,7 +4,7 @@ import axios from 'axios';
 import { ConfigService } from '../config/config.service';
 import { NotionService } from '../notion/notion.service';
 import { Cron } from '@nestjs/schedule';
-import { NATGEO } from 'src/common/constants';
+import { NATGEO } from '../common/constants';
 
 @Injectable()
 export class TwitterService {
