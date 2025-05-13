@@ -40,8 +40,12 @@ Essentially, logs are running in "Step" order, So ```Step 1, Step 2``` and ```St
 
 # Tools
 
+### Notion Demo Database
+- [Link](https://www.notion.so/1ee4505f6025806a906aec2fe6af6244?v=1ee4505f6025805b9545000c94a4817a&pvs=4)
+
 ### Unit testing
 - Execute test by running ```npm run test```
+- Test includes validation CRC response token
 
 #### Check user ID for the Twitter API test: NatGeo Example
 ```
